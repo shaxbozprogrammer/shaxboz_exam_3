@@ -1,0 +1,220 @@
+@use "./mixins";
+@use "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: Open sans;
+}
+.navbar-shrink .navbar {
+    --header-height: 80px;
+    padding: 20px 0;
+    transition: 0.3s;
+    box-shadow: 0 0 10px 5px black;
+}
+#loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+    transition: 1s;
+}
+
+#loading.loading-none {
+    z-index: -1;
+    opacity: 0;
+    background-color: transparent;
+    display: none;
+
+}
+
+@keyframes ldio-akmie3iqlx6 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ldio-akmie3iqlx6>div>div {
+    transform-origin: 100px 100px;
+    animation: ldio-akmie3iqlx6 3s linear infinite;
+    opacity: 1;
+}
+
+.ldio-akmie3iqlx6>div>div>div {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px 0 0 0;
+    transform-origin: 100px 100px;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(1) {
+    animation-duration: 0.5s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(1)>div {
+    background: #e15b64;
+    transform: rotate(0deg);
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(2) {
+    animation-duration: 1s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(2)>div {
+    background: #f47e60;
+    transform: rotate(0deg);
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(3) {
+    animation-duration: 1s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(3)>div {
+    background: #f8b26a;
+    transform: rotate(0deg);
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(4) {
+    animation-duration: 1s;
+}
+
+.ldio-akmie3iqlx6>div div:nth-child(4)>div {
+    background: #abbd81;
+    transform: rotate(0deg);
+}
+
+.loadingio-spinner-wedges-ibhz9d0moo {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: transparent;
+}
+
+.ldio-akmie3iqlx6 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    /* see note above */
+}
+
+.ldio-akmie3iqlx6 div {
+    box-sizing: content-box;
+}
+
+#backtop img {
+    width: 40px;
+    height: 40px;
+}
+
+#backtop {
+    position: fixed;
+    z-index: 99;
+    right: 50px;
+    bottom: -100px;
+    transition: 0.5s;
+}
+
+#backtop.backtop-show {
+    bottom: 100px;
+}
+
+.sec1 {
+    background-color: variables.$primary-color;
+}
+
+.navbar {
+    background-color: variables.$primary-color;
+
+    .offcanvas-body,
+    .offcanvas-body ul {
+        gap: 30px;
+
+        li {
+            color: variables.$white-color;
+        }
+    }
+}
+
+.navbar button {
+    @include mixins.btn;
+}
+
+.breadcrumb {
+    margin-top: 70px;
+}
+.turkish{
+    max-width: 720px;
+}
+.par{
+    text-align: justify;
+    padding: 40px 0 30px 0;
+}
+
+
+
+// ---------------------
+.letter {
+    position: relative;
+    bottom: -200px;
+
+    .letter-title {
+        background: variables.$primary-color;
+        padding: 100px 0;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.40);
+        background: variables.$primary-color;
+        box-shadow: 22px 30px 95px 1px rgba(86, 86, 86, 0.20);
+
+    }
+}
+
+.form input {
+    max-width: 635px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    border: 1px solid rgba(245, 239, 219, 0.50);
+
+}
+
+.form button {
+    @include mixins.btn;
+    background: transparent;
+}
+
+
+
+.footer {
+    background-color: variables.$primary-color;
+    padding-top: 290px;
+    padding-bottom: 50px;
+
+    .footer-card2 p {
+        max-width: 438px;
+        margin: 0 auto;
+
+        padding: 30px 0;
+    }
+
+    .contacts {
+        gap: 20px;
+    }
+}
